@@ -34,6 +34,7 @@
             dataGridView4 = new DataGridView();
             dataGridView5 = new DataGridView();
             dataGridView6 = new DataGridView();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -90,11 +91,21 @@
             dataGridView6.Size = new Size(332, 174);
             dataGridView6.TabIndex = 5;
             // 
+            // button1
+            // 
+            button1.Location = new Point(520, 81);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 6;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1719, 723);
+            Controls.Add(button1);
             Controls.Add(dataGridView6);
             Controls.Add(dataGridView5);
             Controls.Add(dataGridView4);
@@ -120,5 +131,6 @@
         private DataGridView dataGridView4;
         private DataGridView dataGridView5;
         private DataGridView dataGridView6;
+        private Button button1;
     }
 }
