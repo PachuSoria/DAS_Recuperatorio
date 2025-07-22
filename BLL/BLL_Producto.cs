@@ -42,7 +42,12 @@ namespace BLL
         public void ValidarProducto(BE_Producto producto)
         {
             TimeSpan dias = producto.FechaVto - DateTime.Now;
-            if (dias.Days <= 15) producto.Precio = producto.Precio * 0.8m;
+            if (dias.Days <= 15)
+            {
+                producto.Precio = producto.Precio * 0.8m;
+                //DataRow fila = _dalProducto.ObtenerFila(producto.Codigo);
+                //if (fila != null) fila["Precio"] = producto.Precio;
+            }
         }
 
         public List<BE_Producto> ObtenerProductos()
@@ -68,6 +73,11 @@ namespace BLL
         public DataView dv(string s)
         {
             return _dalProducto.dv(s);
+        }
+
+        public void Cancelar()
+        {
+            _dalProducto.Cancelar();
         }
     }
 }

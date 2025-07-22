@@ -23,5 +23,10 @@ namespace BE
             Stock = stock;
             FechaVto = fechaVto;
         }
+
+        public BE_Producto(decimal precio) 
+        {
+            Precio = precio;
+        }
     }
 }

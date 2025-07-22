@@ -138,5 +138,15 @@ namespace DAL
             else dv = new DataView(ds.Tables["Producto"], "", "", DataViewRowState.ModifiedCurrent);
             return dv;
         }
+
+        public void Cancelar()
+        {
+            ds.RejectChanges();
+        }
+
+        //public DataRow ObtenerFila(string codigo)
+        //{
+        //    return ds.Tables["Producto"].Rows.Find(codigo);
+        //}
     }
 }
